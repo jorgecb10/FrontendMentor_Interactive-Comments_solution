@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive comments section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-grey-100 m-0 min-h-dvh grid items-center justify-center py-12">
+
+  <header></header>
+
+  <!-- Pull dynamic content from the data.json file -->
+  <main class="container">
+    <div class="comments"></div>
+
+    <section>
+      <div class="section-add-comment bg-white shadow-md rounded-lg p-4 grid-cols-2 md:flex md:items-start md:justify-between md:gap-3">
+        <picture class="user-picture col-span-1">
+          <source class="user-webp" type="image/webp">
+          <source class="user-png" type="image/png">
+          <img class="img-user" alt="user avatar">
+        </picture>
+        <textarea name="comment" id="comment" placeholder="Add a comment..." class="col-span-3 mb-4 md:mb-0 border border-grey-100 text-grey-800 rounded-lg flex-1 resize-none min-h-17.5 pt-1 pb-10 px-4 hover:border-purple-600 cursor-pointer transition-colors focus:outline outline-purple-600"></textarea>
+        <div class="flex items-start justify-end"><button class="send-btn bg-purple-600 py-2 px-6 rounded-lg text-white font-semibold border-none cursor-pointer hover:opacity-50 transition-opacity">SEND</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mt-12">
+    <div class="attribution font-semibold text-center">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-purple-600 font-bold hover:text-purple-700 transition-colors duration-200">Frontend Mentor</a>. 
+      Coded by <a href="https://www.github" class="text-purple-600 font-bold hover:text-purple-700 transition-colors duration-200">Jorge Carranza</a>.
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

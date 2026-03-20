@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+    --font-rubik: 'Rubik', sans-serif;
+
+    --color-purple-600: hsl(238, 40%, 52%);
+    --color-pink-400: hsl(358, 79%, 66%);
+    --color-purple-200: hsl(239, 57%, 85%);
+    --color-pink-200: hsl(357, 100%, 86%);
+    --color-grey-800: hsl(212, 24%, 26%);
+    --color-grey-500: hsl(211, 10%, 45%);
+    --color-grey-100: hsl(223, 19%, 93%);
+    --color-grey-50: hsl(228, 33%, 97%);
+    --color-white: hsl(0, 100%, 100%);
+
+    --breakpoint-xs: 540px;
+}
+
+body {
+    grid-template-rows:  auto 1fr auto;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.icon-operation {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(4443%) hue-rotate(183deg) brightness(98%) contrast(90%);
+    transition: filter .1s ease-out;
+}
+
+.icon-operation:hover {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(10%) saturate(4006%) hue-rotate(200deg) brightness(88%) contrast(84%);
+    transition-duration: .2s;
+}
+
+.img-user {
+    width: 40px;
+}
+
+.modal {
+    position: absolute;
+    content: '';
+    border: none;
+    border-radius: 5px;
+    top: 50%;
+    padding: 2rem;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 768px) {
+    .section-add-comment,
+    .reply-box {
+        display: grid;
+        grid-template-rows: auto;
+    }
+}
+
+.user-picture {
+    grid-row: 2 / 3;
+}
+
+@media (min-width: 768px) {
+    .replies-container {
+        position: relative;
+    }
+
+    .replies-container::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: var(--color-gray-300);
+        left: 40px;
+    }
+}
